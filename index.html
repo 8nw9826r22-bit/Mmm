@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Streak">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<title>Streak</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <div class="eyebrow" id="todayLabel"></div>
+    <h1>Streak</h1>
+  </header>
+
+  <section class="hero" aria-live="polite">
+    <div class="count" id="current">0</div>
+    <div class="unit" id="unit">day streak</div>
+    <div class="best" id="best">Best: 0 days</div>
+  </section>
+
+  <section class="card cal">
+    <div class="cal-head">
+      <button class="nav" id="prev" aria-label="Previous month">‹</button>
+      <div class="month" id="monthLabel"></div>
+      <button class="nav" id="next" aria-label="Next month">›</button>
+    </div>
+    <div class="dow" id="dow"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <button class="cta" id="mark">Mark today as done</button>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
